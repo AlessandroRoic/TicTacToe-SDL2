@@ -9,6 +9,8 @@ find_package(SDL2_ttf CONFIG REQUIRED)
 find_package(SDL2_mixer CONFIG REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+
 add_executable(TicTacToe main.cpp)
 
 target_link_libraries(TicTacToe PRIVATE SDL2::SDL2)
